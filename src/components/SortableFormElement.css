@@ -1,0 +1,80 @@
+/* SortableFormElement.css */
+.sortable-element {
+    position: relative;
+    margin-bottom: 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.sortable-element:hover {
+    border-color: #e1e8ed;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.sortable-element.selected {
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.sortable-element.dragging {
+    opacity: 0.6;
+    transform: rotate(1deg);
+    z-index: 1000;
+}
+
+.element-controls {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    display: flex;
+    gap: 0.25rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.sortable-element:hover .element-controls {
+    opacity: 1;
+}
+
+.drag-handle {
+    background: #f8f9fa;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    padding: 0.2rem 0.4rem;
+    cursor: grab;
+    font-size: 0.7rem;
+    color: #7f8c8d;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+}
+
+.remove-btn {
+    background: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+.element-content {
+    padding: 0.875rem;
+}
